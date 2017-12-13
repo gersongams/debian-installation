@@ -77,13 +77,18 @@ sudo apt-get install -y geany &&
 # Uninstalling unneeded software
 # sudo apt-get purge evolution &&
 sudo apt-get purge gnome-2048 aisleriot atomix gnome-chess five-or-more hitori iagno gnome-klotski lightsoff gnome-mahjongg gnome-mines gnome-nibbles quadrapassel four-in-a-row gnome-robots gnome-sudoku swell-foop tali gnome-taquin gnome-tetravex &&
-sudo apt-get autoremove 
+sudo apt-get autoremove &&
 ################################################
+# Installing curl
+sudo apt install -y curl &&
+################################################
+# Installing node
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - &&
+sudo apt-get install -y nodejs &&
+################################################
+# Installing certificates
+sudo apt install apt-transport-https lsb-release ca-certificates wget
+
 # LaTeX (uncomment next line to install LaTeX, it might take time)
 # sudo apt-get install -y texlive-full texmaker
-
-
-
-
-
 
