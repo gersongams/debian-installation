@@ -6,7 +6,7 @@ sudo apt install apache2 apache2-utils &&
 ################################################
 # Installing mariabdb
 sudo apt install mariadb-server mariadb-client mariadb-common &&
-#mysql_secure_installation
+#sudo mysql_secure_installation
 ################################################
 # Installing php7.1
 sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg &&

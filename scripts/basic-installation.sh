@@ -82,13 +82,26 @@ sudo apt-get autoremove &&
 # Installing curl
 sudo apt install -y curl &&
 ################################################
+# Installing aptitude
+sudo apt install -y aptitude &&
+################################################
+# Installing htop
+sudo apt install -y htop &&
+################################################
 # Installing node
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - &&
 sudo apt-get install -y nodejs &&
 ################################################
 # Installing certificates
-sudo apt install apt-transport-https lsb-release ca-certificates wget
-
+sudo apt install apt-transport-https lsb-release ca-certificates wget &&
+################################################
+# Install firewall
+sudo apt install ufw &&
+sudo ufw status &&
+sudo ufw allow 80/tcp &&
+sudo ufw allow 443/tcp &&
+sudo ufw reload &&
+sudo ufw enable
 # LaTeX (uncomment next line to install LaTeX, it might take time)
 # sudo apt-get install -y texlive-full texmaker
 
