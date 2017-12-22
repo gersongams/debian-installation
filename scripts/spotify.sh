@@ -1,9 +1,9 @@
 # Spotify
 
 #Update
-sudo apt-get -y update && 
-sudo apt-get -y upgrade && 
-sudo apt-get -y dist-upgrade && 
+sudo apt-get -y update &&
+sudo apt-get -y upgrade &&
+sudo apt-get -y dist-upgrade &&
 sudo apt-get -y autoremove &&
 
 sudo apt install dirmngr &&
@@ -19,6 +19,5 @@ wget http://ftp.us.debian.org/debian/pool/main/o/openssl/libssl1.0.0_1.0.1t-1+de
 sudo dpkg -i libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb &&
 
 rm libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb &&
-
 
 sudo apt install spotify-client
