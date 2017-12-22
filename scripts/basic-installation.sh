@@ -1,31 +1,48 @@
 # Basic installation
 
 #Update
-sudo apt-get -y update && 
-sudo apt-get -y upgrade && 
-sudo apt-get -y dist-upgrade && 
+echo '################################################' &&
+echo 'Updating...' &&
+echo '################################################' &&
+sudo apt-get -y update &&
+sudo apt-get -y upgrade &&
+sudo apt-get -y dist-upgrade &&
 sudo apt-get -y autoremove &&
 ################################################
-# Install SSH
+echo '################################################' &&
+echo 'Installing SSH...'
+echo '################################################' &&
 sudo apt-get install ssh &&
 ################################################
-# Install ifconfig
+echo '################################################' &&
+echo 'Installling net-tols...'
+echo '################################################'&&
 sudo apt-get install net-tools -y &&
 echo 'export PATH="$PATH:/sbin"' >> $HOME/.bashrc &&
 ################################################
-# Install byobu
+echo '################################################'&&
+echo 'Installling byobu...'
+echo '################################################'&&
 sudo apt-get install byobu -y &&
 ################################################
-# Development tools:
+echo '################################################'&&
+echo 'Installling Development tools...'
+echo '################################################'&&
 sudo apt-get install -y build-essential cmake &&
 ################################################
-# File archivers
+echo '################################################'&&
+echo 'Installling File archivers...'
+echo '################################################'&&
 sudo apt-get install -y p7zip p7zip-full unrar-free unzip &&
 ################################################
-# Others (need to be categorized):
+echo '################################################'&&
+echo 'Installling Others...'
+echo '################################################'&&
 sudo apt-get install -y faketime htop lshw pdftk wget &&
 ################################################
-# Terminal multiplexer
+echo '################################################'&&
+echo 'Installling Terminal multiplexer...'
+echo '################################################'&&
 sudo apt-get install -y screen &&
 ################################################
 # Text editors:
@@ -94,6 +111,13 @@ sudo apt-get install -y nodejs &&
 ################################################
 # Installing certificates
 sudo apt install apt-transport-https lsb-release ca-certificates wget &&
+################################################
+# Installing zsh
+sudo apt install zsh wget &&
+################################################
+# Installing ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &&
+chsh -s $(which zsh) &&
 ################################################
 # Install firewall
 sudo apt install ufw &&
