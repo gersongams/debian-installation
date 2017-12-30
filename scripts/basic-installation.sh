@@ -1,49 +1,49 @@
 # Basic installation
 
 #Update
-echo '################################################' &&
-echo 'Updating...' &&
-echo '################################################' &&
+echo '################################################';
+echo 'Updating...';
+echo '################################################';
 sudo apt-get -y update &&
 sudo apt-get -y upgrade &&
 sudo apt-get -y dist-upgrade &&
 sudo apt-get -y autoremove &&
 ################################################
-echo '################################################' &&
-echo 'Installing SSH...'
-echo '################################################' &&
+echo '################################################';
+echo 'Installing SSH...';
+echo '################################################';
 sudo apt-get install ssh &&
 ################################################
-echo '################################################' &&
-echo 'Installling net-tols...'
-echo '################################################'&&
+echo '################################################';
+echo 'Installling net-tols...';
+echo '################################################';
 sudo apt-get install net-tools -y &&
 echo 'export PATH="$PATH:/sbin"' >> $HOME/.bashrc &&
 ################################################
-echo '################################################'&&
-echo 'Installling byobu...'
-echo '################################################'&&
+echo '################################################';
+echo 'Installling byobu...';
+echo '################################################';
 sudo apt-get install byobu -y &&
 ################################################
-echo '################################################'&&
-echo 'Installling Development tools...'
-echo '################################################'&&
+echo '################################################';
+echo 'Installling Development tools...';
+echo '################################################';
 sudo apt-get install -y build-essential cmake &&
 ################################################
-echo '################################################'&&
-echo 'Installling File archivers...'
-echo '################################################'&&
+echo '################################################';
+echo 'Installling File archivers...';
+echo '################################################';
 sudo apt-get install -y p7zip p7zip-full unrar-free unzip &&
 ################################################
-echo '################################################'&&
-echo 'Installling Others...'
-echo '################################################'&&
+echo '################################################';
+echo 'Installling Others...';
+echo '################################################';
 sudo apt-get install -y faketime htop lshw pdftk wget &&
 ################################################
-echo '################################################'&&
+echo '################################################';
 echo 'Installling Terminal multiplexer...'
-echo '################################################'&&
-sudo apt-get install -y screen &&
+echo '################################################';
+sudo apt-get install -y screen  &&
 ################################################
 # Text editors:
 sudo apt-get install -y nano vim &&
@@ -115,9 +115,15 @@ sudo apt install apt-transport-https lsb-release ca-certificates wget &&
 # Installing zsh
 sudo apt install zsh wget &&
 ################################################
+# Installing ruby
+sudo apt install -y ruby-full &&
+################################################
 # Installing ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &&
 chsh -s $(which zsh) &&
+################################################
+# Installing sass
+sudo gem install sass --no-user-install
 ################################################
 # Install firewall
 sudo apt install ufw &&
